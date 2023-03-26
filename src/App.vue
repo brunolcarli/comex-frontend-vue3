@@ -1,24 +1,23 @@
 
 <template>
-  <body>
+
+  <header>
     <NavBar />
+  </header>
 
-    <FormCategory />
-    <!-- <ProductForm /> -->
+  <main>
+    <router-view></router-view>
+  </main>
 
-    <!-- <Home /> -->
+  <footer>
     <Footer />
-  </body>
+  </footer>
    
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import NavBar from './components/NavBar.vue';
-import FormCategory from './views/FormCategory.vue'
-// import Home from './views/ProductForm.vue'
-// import ProductForm from './views/ProductForm.vue'
-import Home from './views/Home.vue'
 import Footer from './components/Footer.vue';
 
 export default defineComponent({
@@ -26,9 +25,7 @@ export default defineComponent({
   components: {
     NavBar,
     Footer,
-    FormCategory,
-    // ProductForm,
-    Home
+   
   }
 });
 

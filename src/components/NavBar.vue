@@ -13,22 +13,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Promoções</a>
+            <RouterLink to="/home" class="nav-link text-light">Home</RouterLink>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="page/category/category.html">Categorias</a>
+            <RouterLink to="/category" class="nav-link text-light">Categorias</RouterLink>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Buscar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Contato</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Carrinho</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Entrar</a>
+            <RouterLink to="/product" class="nav-link text-light">Produtos</RouterLink>
           </li>
         </ul>
         <form class="search-group disable_mobile">
