@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
     <div class="footer_midia">
-        <img src="../assets/logo-1d225b61.svg" class="logo-white" alt="Logo">
+        <img src="../assets/logo-1d225b61.svg" class="logo-white" alt="Logo" >
         <div>
           <a class="btn logo-white" href="#!" role="button"><i class="fab fa-twitter"></i></a>
           <a class="btn logo-white" href="#!" role="button"><i class="fab fa-instagram"></i></a>

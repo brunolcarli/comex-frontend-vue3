@@ -1,15 +1,14 @@
 <template>
     <div class="container">
-        <div class="category">
-            <h1 class="title">Nova categoria</h1>
-
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" id="input_category"
-                    placeholder="Informe o nome da nova categoria com pelo menos 2 letras...">
-                <button class="btn btn_color" type="button" id="btn_save" @click="save">Salvar</button>
+        <form id="formCategory" @submit.prevent="save">
+            <div class="category">
+                <h1 class="title">Nova categoria</h1>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="input_category" v-model="categoryName" placeholder="Informe o nome da nova categoria com pelo menos 2 letras...">
+                    <button class="btn btn_color" type="submit" id="btn_save" >Salvar</button>
+                </div>
             </div>
-
-        </div>
+        </form>
 
         <div class="table_category" id="table_category">
             <table class="table table-hover ">
@@ -30,7 +29,7 @@
                             <i class="fa-solid fa-trash" title="Excluir" @click="removeCategory(index)"></i>
                             <i class="fa-solid fa-pen-to-square" title="Alterar"></i>
                             <i class="fa-solid fa-xmark" title="Desativar"></i>
-                        </td>
+                        </td> 
 
                     </tr>
                 </tbody>
@@ -45,31 +44,62 @@ import { Category } from '@/models/category';
 
 import { defineComponent } from 'vue';
 
+import { ref } from 'vue';
+
 export default defineComponent({
     name: 'FormCategory',
-    data() {
-        return {
-            categories: [] as Category[]
-        }
-    },
-    methods: {
-        save() {
-            const input_category = document.getElementById("input_category") as HTMLInputElement;
-            const category = new Category(input_category.value);
-            this.categories.push(category)
-            console.log(this.categories)
-            input_category.value = ''
+    // data() {
+    //     return {
+    //         categories: [] as Category[]
+    //     }
+    // },
+
+    // methods: {
+    //     save() {
+    //         const input_category = document.getElementById("input_category") as HTMLInputElement;
+    //         const category = new Category(input_category.value);
+    //         this.categories.push(category)
+    //         console.log(this.categories)
+    //         input_category.value = ''
 
            
-        },
-        removeCategory(index: number): void {
-            console.log(this.categories)
-            this.categories.splice(index, 1)
-            console.log(this.categories)
+    //     // },
+    //     removeCategory(index: number): void {
+    //         console.log(this.categories)
+    //         this.categories.splice(index, 1)
+    //         console.log(this.categories)
 
-        }
-    }
-})
+    //     }
+    // },
+
+    setup() {
+
+       const categoryName = ref ("")
+       let categories = ref<Category[]>([]);
+        
+       function save(): void {
+            const category = new Category(categoryName.value);
+            categories.value.push(category)
+            console.log(categories.value)
+            categoryName.value = ''
+
+        };
+
+        function removeCategory(index: number): void {
+            categories.value.splice(index, 1)
+
+        };
+
+       return {
+        categoryName,
+        categories,
+        save,
+        removeCategory
+
+       };
+
+    },
+});
 
 
 
