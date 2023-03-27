@@ -3,22 +3,22 @@ import moment from 'moment';
 
 export interface Product {
    name: string,
-   description: String,
+   description: string,
    price: Number,
    qtd: Number,
-   category: String,
-   img: String,
-   uuid: String,
-   createdAt: String;
+   category: string,
+   img: string,
+   uuid: string,
+   createdAt: string;
 
 }
 
 export function createProduct(
   name: string,
-  description: String,
+  description: string,
   price: Number,
   qtd: Number,
-  category: String): Product {
+  category: string): Product {
   return {
     name,
     description,

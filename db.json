@@ -1,0 +1,175 @@
+{
+  "clientes": [
+    {
+      "uuid": "54059881-dac1-4b4e-9102-c317eccebe44",
+      "name": "Alana",
+      "cpf": "06110234907",
+      "birth": "1997-06-27",
+      "email": "alanacarsten@gmail.com",
+      "contact": "(41) 998815-2928",
+      "address": {
+        "cep": "83508-400",
+        "address": "Rua Padre José Maurício",
+        "number": "",
+        "complement": "",
+        "district": "Tanguá",
+        "city": "Almirante Tamandaré",
+        "state": "PR"
+      },
+      "id": 1
+    },
+    {
+      "uuid": "c113c88e-9b47-4add-b568-4a830f9cb55c",
+      "name": "Alana A ",
+      "cpf": "06110234907",
+      "birth": "1997-06-27",
+      "email": "alanacarsten@gmail.com",
+      "contact": "(41) 998815-2928",
+      "address": {
+        "cep": "83508-400",
+        "address": "Rua Padre José Maurício",
+        "number": "",
+        "complement": "",
+        "district": "Tanguá",
+        "city": "Almirante Tamandaré",
+        "state": "PR"
+      },
+      "id": 2
+    }
+  ],
+  "produtos": [
+    {
+      "uuid": "2e7d4832-9a43-4c98-ac15-520f101db0f8",
+      "name": "Placa-Mãe1",
+      "description": "Placa-Mãe",
+      "price": "1.500",
+      "qtd": "11",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 1,
+      "img": "../assets/img/product1.jpg"
+    },
+    {
+      "uuid": "ea91b025-688f-4911-93fa-f2bbca0dcebd",
+      "name": "Controle Nintendo",
+      "description": "Controle Super Nintendo",
+      "price": "1.900",
+      "qtd": "14",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 2,
+      "img": "../assets/img/product2.jpg"
+    },
+    {
+      "uuid": "d27a7772-3abe-45be-91dd-536e4e5cb032",
+      "name": "Memória RAM",
+      "description": "Memória RAM",
+      "price": "1.000",
+      "qtd": "1",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 3,
+      "img": "../assets/img/product3.jpg"
+    },
+    {
+      "uuid": "c4905bdb-f89e-429d-83ec-45474b5bec8b",
+      "name": "Fone Bluetooth",
+      "description": "Fone Bluetooth",
+      "price": "90.00",
+      "qtd": "11",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 4,
+      "img": "../assets/img/product4.jpg"
+    },
+    {
+      "uuid": "e0c4b058-9c33-4b3d-b470-6e5b236c9195",
+      "name": "Controle PS (blue)",
+      "description": "Controle PS (blue)",
+      "price": "400",
+      "qtd": "2",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 5,
+      "img": "../assets/img/product5.jpg"
+    },
+    {
+      "uuid": "345a28b2-f0cc-4a57-a86a-d6da4f6de4e8",
+      "name": "Controle PS (black)",
+      "description": "Controle PS (black)",
+      "price": "1.900",
+      "qtd": "5",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 6,
+      "img": "../assets/img/product6.jpg"
+    },
+    {
+      "uuid": "05d833f8-2ed7-4d52-a88d-0c4ae3bf9d20",
+      "name": "Controle X-Box",
+      "description": "Controle X-Box",
+      "price": "1.900",
+      "qtd": "9",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 7,
+      "img": "../assets/img/product7.jpg"
+    },
+    {
+      "uuid": "e9d49607-7e07-490e-9d85-2ebbe57229a2",
+      "name": "Processador",
+      "description": "Processador",
+      "price": "1.733",
+      "qtd": "7",
+      "category": "1",
+      "img": "../assets/img/product8.jpg",
+      "createdAt": "2023-03-08",
+      "id": 8
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 0,
+      "qtd": 0,
+      "category": "",
+      "img": "../assets/img/product8.jpg",
+      "uuid": "784c2fd0-ccb1-11ed-a4d5-63209a41012a",
+      "createdAt": "2023-03-27",
+      "id": 9
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": 0,
+      "qtd": 0,
+      "category": "",
+      "img": "../assets/img/product8.jpg",
+      "uuid": "784c2fd0-ccb1-11ed-a4d5-63209a41012a",
+      "createdAt": "2023-03-27",
+      "id": 10
+    }
+  ],
+  "categorias": [
+    {
+      "name": "Informatica",
+      "uuid": "fe18f128-ae9a-4d18-b365-13bd6376ac04",
+      "status": "ATIVA",
+      "createdAt": "2023-03-07",
+      "id": 1
+    },
+    {
+      "uuid": "dafab413-03f0-4bad-85da-89feab41925a",
+      "name": "Informatica",
+      "status": "ATIVA",
+      "createdAt": "2023-03-07",
+      "id": 2
+    },
+    {
+      "uuid": "8948b863-da44-4cba-b034-6f65c27538eb",
+      "name": "Informatica",
+      "status": "ATIVA",
+      "createdAt": "2023-03-07",
+      "id": 3
+    }
+  ]
+}

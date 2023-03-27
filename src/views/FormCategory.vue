@@ -4,8 +4,9 @@
             <div class="category">
                 <h1 class="title">Nova categoria</h1>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="input_category" v-model="categoryName" placeholder="Informe o nome da nova categoria com pelo menos 2 letras...">
-                    <button class="btn btn_color" type="submit" id="btn_save" >Salvar</button>
+                    <input type="text" class="form-control" id="input_category" v-model="categoryName"
+                        placeholder="Informe o nome da nova categoria com pelo menos 2 letras...">
+                    <button class="btn btn_color" type="submit" id="btn_save">Salvar</button>
                 </div>
             </div>
         </form>
@@ -29,7 +30,7 @@
                             <i class="fa-solid fa-trash" title="Excluir" @click="removeCategory(index)"></i>
                             <i class="fa-solid fa-pen-to-square" title="Alterar"></i>
                             <i class="fa-solid fa-xmark" title="Desativar"></i>
-                        </td> 
+                        </td>
 
                     </tr>
                 </tbody>
@@ -40,9 +41,9 @@
 
 <script lang="ts">
 
-import { Category } from '@/models/category';
-
-import { defineComponent } from 'vue';
+import type { Category } from '@/models/category';
+import { createCategory } from '@/models/category';
+import { defineComponent, onMounted } from 'vue';
 
 import { ref } from 'vue';
 
@@ -62,7 +63,7 @@ export default defineComponent({
     //         console.log(this.categories)
     //         input_category.value = ''
 
-           
+
     //     // },
     //     removeCategory(index: number): void {
     //         console.log(this.categories)
@@ -74,34 +75,53 @@ export default defineComponent({
 
     setup() {
 
-       const categoryName = ref ("")
-       let categories = ref<Category[]>([]);
-        
-       function save(): void {
-            const category = new Category(categoryName.value);
-            categories.value.push(category)
-            console.log(categories.value)
+        const categoryName = ref("")
+        let categories = ref<Category[]>([]);
+
+
+        function save(): void {
+            const category = createCategory(categoryName.value);
+            fetch('http://localhost:3000/categorias', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(category)
+            })
+                .then(resposta => listCategories())
+
             categoryName.value = ''
 
         };
 
         function removeCategory(index: number): void {
-            categories.value.splice(index, 1)
+            let category = categories.value[index];
+            fetch(`http://localhost:3000/categorias/${category.id}`, {
+                method: 'DELETE'
+            })
+                .then(resposta => listCategories());
 
         };
 
-       return {
-        categoryName,
-        categories,
-        save,
-        removeCategory
+        function listCategories(): void {
+            fetch('http://localhost:3000/categorias')
+                .then(response => response.json())
+                .then(result => categories.value = result);
+        };
 
-       };
+        onMounted(() => {
+            listCategories();
+        });
+
+        return {
+            categoryName,
+            categories,
+            save,
+            removeCategory
+        };
 
     },
 });
-
-
 
 </script>
 
