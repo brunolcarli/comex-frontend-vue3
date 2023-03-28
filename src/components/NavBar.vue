@@ -21,6 +21,9 @@
           <li class="nav-item">
             <RouterLink to="/product" class="nav-link text-light">Produtos</RouterLink>
           </li>
+          <li class="nav-item">
+            <RouterLink to="/formclient" class="nav-link text-light">Clientes</RouterLink>
+          </li>
         </ul>
         <form class="search-group disable_mobile">
           <input class=" input-search" type="search" placeholder="Pesquisar..." aria-label="Search" />
@@ -40,7 +43,7 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style scoped>
 
 .navbar {
     background-color: #8FA8FF;

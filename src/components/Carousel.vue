@@ -60,7 +60,7 @@ export default defineComponent({
 
 </script>
 
-<style>
+<style scoped>
 @media (max-width: 768px) {
     .carousel_box {
         display: flex;

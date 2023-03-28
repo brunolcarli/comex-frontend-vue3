@@ -1,50 +1,47 @@
 <template>
-    <div class="container container_product">
-        <div class="product w-75">
-            <h1 class="title">Novo produto</h1>
-
-            <form id="form_product" @submit.prevent="saveProduct">
-                <div>
-
-                    <div class="product_1">
-                        <div class="infos_1">
-                            <label for="product_name">Nome:</label>
-                            <input type="text" class="form-control" id="product_name" v-model="product.name">
+        <div class="container container_product">
+            <div class="product w-75">
+                <h1 class="title">Novo produto</h1>
+                <form id="form_product" @submit.prevent="saveProduct">
+                    <div>
+                        <div class="product_1">
+                            <div class="infos_1">
+                                <label  for="product_name">Nome:</label>
+                                <input type="text" class="form-control" id="product_name" v-model="product.name">
+                            </div>
+                            <div class="price">
+                                <label for="product_price">Preço:</label>
+                                <input type="text" class="form-control" id="product_price"  v-model="product.price">
+                            </div>
+                            <div class="category_products">
+                                <label for="product_qtd">Quantidade em estoque:</label>
+                                <input type="text" class="form-control" id="product_qtd" v-model="product.qtd">
+                            </div>
                         </div>
-                        <div class="price">
-                            <label for="product_price">Preço:</label>
-                            <input type="text" class="form-control" id="product_price" v-model="product.price">
-                        </div>
-                        <div class="category_products">
-                            <label for="product_qtd">Quantidade em estoque:</label>
-                            <input type="text" class="form-control" id="product_qtd" v-model="product.qtd">
-                        </div>
-                    </div>
-                    <div class="product_2">
-                        <div class="infos_2">
-                            <label for="product_description">Descrição:</label>
-                            <textarea rows="5" class="form-control" id="product_description"
-                                v-model="product.description"></textarea>
-                        </div>
-                        <div class="category_products">
-                            <label for="product_category">Categoria:</label>
-                            <select class="form-select" aria-label="Default select example" id="product_category"
-                                v-model="product.category">
-                                <option value="1">Informática</option>
-                                <option value="2">Livros</option>
-                                <option value="3">Móveis</option>
-                            </select>
+                        <div class="product_2">
+                            <div class="infos_2">
+                                <label for="product_description">Descrição:</label>
+                                <textarea rows="5" class="form-control" id="product_description" v-model="product.description"></textarea>
+                            </div>
+                            <div class="category_products">
+                                <label for="product_category">Categoria:</label>
+                                <select class="form-select" aria-label="Default select example" id="product_category"  v-model="product.category">
+                                    <option selected>Selecione...</option>
+                                    <option value="1">Informática</option>
+                                    <option value="2">Livros</option>
+                                    <option value="3">Móveis</option>
+                                </select>
+                            </div>
+        
                         </div>
                     </div>
                     <div class="input_btn">
                         <button type="submit" class="btn form_btn" id="form_btn">Salvar</button>
                     </div>
-                </div>
-            </form>
-
-
+                </form>
+            </div>
         </div>
-    </div>
+   
 </template>
 
 <script lang="ts">
@@ -81,7 +78,7 @@ export default defineComponent({
 
 </script>
 
-<style>
+<style scoped>
 .title {
     color: #ffffff;
 }

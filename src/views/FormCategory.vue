@@ -49,30 +49,7 @@ import { ref } from 'vue';
 
 export default defineComponent({
     name: 'FormCategory',
-    // data() {
-    //     return {
-    //         categories: [] as Category[]
-    //     }
-    // },
-
-    // methods: {
-    //     save() {
-    //         const input_category = document.getElementById("input_category") as HTMLInputElement;
-    //         const category = new Category(input_category.value);
-    //         this.categories.push(category)
-    //         console.log(this.categories)
-    //         input_category.value = ''
-
-
-    //     // },
-    //     removeCategory(index: number): void {
-    //         console.log(this.categories)
-    //         this.categories.splice(index, 1)
-    //         console.log(this.categories)
-
-    //     }
-    // },
-
+    
     setup() {
 
         const categoryName = ref("")
@@ -125,7 +102,7 @@ export default defineComponent({
 
 </script>
 
-<style>
+<style scoped>
 .container_category {
     flex-direction: column;
 

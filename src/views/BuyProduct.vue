@@ -81,7 +81,7 @@ export default defineComponent({
 
 </script>
 
-<style>
+<style scoped>
 
 .line {
     border-bottom: 1px solid  #8FA8FF;

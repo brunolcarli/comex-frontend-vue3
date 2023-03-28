@@ -4,6 +4,7 @@ import FormCategory from "@/views/FormCategory.vue";
 import Home from "@/views/Home.vue"
 import ProductForm from "@/views/ProductForm.vue"
 import BuyProduct from "@/views/BuyProduct.vue"
+import FormClient from "@/views/FormClient.vue"
 
 const route: RouteRecordRaw[] = [
     {
@@ -25,6 +26,11 @@ const route: RouteRecordRaw[] = [
         path: '/buyproduct',
         name: 'BuyProduct',
         component: BuyProduct
+    },
+    {
+        path: '/formclient',
+        name: 'formClient',
+        component: FormClient
     },
     
 ]

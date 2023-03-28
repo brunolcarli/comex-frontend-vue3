@@ -39,7 +39,7 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style scoped>
 
 .footer_midia {
     display: flex;

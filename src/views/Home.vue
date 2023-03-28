@@ -12,7 +12,7 @@
                         <figcaption class="figcaption">{{ product.name }}</figcaption>
                         <figcaption><i class="fa-solid fa-dollar-sign"></i>{{ product.price }}</figcaption>
                         <RouterLink to="/buyproduct" class="btn btn-lg button_panel">Comprar</RouterLink>
-                        <!-- <a href="../../product.html" class="btn btn-lg button_panel">Comprar</a> -->
+                
                     </div>
                 </figure>
             </section>
@@ -48,7 +48,7 @@ export default defineComponent({
         function getImg(imgSrc: string): string {
             const imgUrl = new URL(imgSrc as string, import.meta.url)
             return imgUrl.toString();
-        }
+        };
 
         onMounted(() => {
             listProduct();
@@ -64,7 +64,7 @@ export default defineComponent({
 
 </script>
 
-<style>
+<style scoped>
 .back_home {
     display: flex;
     flex-direction: column;
